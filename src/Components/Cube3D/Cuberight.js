@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 const StyledCubeRight = styled.div`
     transform: rotateY(90deg) translateZ(1000px); 
+    border-radius: 20px;
 `;
 export function CubeRight() {
     return(

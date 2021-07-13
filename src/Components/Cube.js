@@ -38,14 +38,14 @@ const StyledCube = styled.div`
             position: absolute;
             width: 100%;
             height: 100%;
-
+            border-radius: 20px;
             border: 3px solid #acf9fb; 
 
             font-size: 2rem;
             font-weight:bold;
             color: #fff;
             text-align: center;
-            background: #fff;
+            background: #0F1624;
 
         }
     }
@@ -87,7 +87,7 @@ export function Cube() {
     const [face, setFace] = useState('show-face')
     return(
         <StyledCube>
-            <div id="cube-wrapper" className={`${face}`}>
+            <div  id="cube-wrapper" className={`${face}`}>
                <CubeFront /> 
                <CubeBack /> 
                <CubeRight /> 
@@ -96,8 +96,8 @@ export function Cube() {
                <CubeBottom /> 
             </div>
             <div id="cube-controls">
-                <span className={`cube-control ${face === 'show-front'? 'selected' : '' }`} onClick={() => setFace('show-front')}>menu1</span> 
-                <span className={`cube-control ${face === 'show-right'? 'selected' : '' }`} onClick={() => setFace('show-right')}>mis Proyectos</span> 
+                <span className={`cube-control ${face === 'show-front'? 'selected' : '' }`} onClick={() => setFace('show-front')}>HOME</span> 
+                <span className={`cube-control ${face === 'show-right'? 'selected' : '' }`} onClick={() => setFace('show-right')}>Mis Proyectos</span> 
                 <span className={`cube-control ${face === 'show-back'? 'selected' : '' }`} onClick={() => setFace('show-back')}>menu3</span> 
                 <span className={`cube-control ${face === 'show-left'? 'selected' : '' }`} onClick={() => setFace('show-left')}>menu4</span> 
                 <span className={`cube-control ${face === 'show-top'? 'selected' : '' }`} onClick={() => setFace('show-top')}>menu5</span> 
